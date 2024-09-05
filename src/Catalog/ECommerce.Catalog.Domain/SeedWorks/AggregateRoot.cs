@@ -10,7 +10,7 @@ namespace ECommerce.Catalog.Domain.SeedWorks
     public abstract class AggregateRoot<TKey> : Entity<TKey>
         where TKey : IComparable
     {
-        private List<INotification> _domainEvents;
+        public List<INotification> _domainEvents;
         
 
         public void AddDomainEvent(IDomainEvent domainEvent)
