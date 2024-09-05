@@ -9,7 +9,7 @@ namespace ECommerce.Catalog.Domain.SeedWorks
     public abstract class Entity<TKey> : IEntity<TKey>
         where TKey : IComparable
     {
-        public required TKey Id { get; init ; }
+        public TKey Id { get; init ; }
     }
 
 
