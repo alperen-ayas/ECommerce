@@ -1,4 +1,5 @@
 ﻿using ECommerce.Catalog.Application.Abstractions.Repositories;
+using ECommerce.Catalog.Domain.AggregateModels.ProductModels;
 using ECommerce.Catalog.Infrastructure.Persistence;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,12 @@ namespace ECommerce.Catalog.Infrastructure.Repositories
         {
             _catalogDbContext = catalogDbContext;
         }
+
+        public async Task CreateProduct(Product product)
+        {
+            await _catalogDbContext.Set<Product>().AddAsync(product);
+        }
+
         public Task<int> SaveChangesAsync()
         {
             return _catalogDbContext.SaveChangesAsync();

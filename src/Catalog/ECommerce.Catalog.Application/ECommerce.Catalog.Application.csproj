@@ -10,4 +10,14 @@
     <ProjectReference Include="..\ECommerce.Catalog.Domain\ECommerce.Catalog.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\Products\Validations\" />
+    <Folder Include="UseCases\Products\Queries\" />
+    <Folder Include="UseCases\ProductVariants\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.1-pre01" />
+  </ItemGroup>
+
 </Project>
